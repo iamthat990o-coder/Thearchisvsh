@@ -167,7 +167,7 @@
 <div class="container">
     <header>
         <h1>Green Hydrogen Techno-Economic & Strategic Decision Platform</h1>
-        <p>A Unified Engineering Framework with Integrated Machine Learning & Strategic MBB Sensitivity Analysis</p>
+        <p>A Unified Engineering Framework with Integrated Machine Learning & Strategic Management Sensitivity Analysis</p>
     </header>
 
     <div class="grid">
@@ -176,7 +176,7 @@
             <h2>1. Technical & Strategic Inputs</h2>
             
             <div class="form-group">
-                <label for="scenario">Strategic Scenario (MBB Framework)</label>
+                <label for="scenario">Strategic Scenario (Consulting Framework)</label>
                 <select id="scenario" onchange="applyScenario()">
                     <option value="base">Base Case (Standard Vision 2030 Trajectory)</option>
                     <option value="aggressive">Aggressive Transformation (High Tech/Subsidy)</option>
@@ -209,7 +209,7 @@
 
         <!-- Outputs Dashboard Block -->
         <div class="card">
-            <h2>2. MBB Executive Dashboard & Metrics</h2>
+            <h2>2. Executive Dashboard & Commercial Metrics</h2>
             
             <div class="results-box">
                 <div class="metric">
@@ -250,7 +250,6 @@
 </div>
 
 <script>
-    // Scenario data to simulate dynamic MBB insights
     const scenarios = {
         base: { solar: 100, wind: 50, price: 5.5, config: "Optimized Hybrid" },
         aggressive: { solar: 150, wind: 100, price: 6.5, config: "High Capacity Synergy" },
@@ -265,50 +264,39 @@
     }
 
     function calculatePlatform() {
-        // 1. Grab engineering inputs
         const solar = parseFloat(document.getElementById("solarInput").value);
         const wind = parseFloat(document.getElementById("windInput").value);
         const electrolyzer = parseFloat(document.getElementById("electrolyzerSize").value);
         const marketPrice = parseFloat(document.getElementById("marketPrice").value);
         
-        // 2. Hybrid Synergy & Capacity Factor Engineering Equations
-        const totalRenewableInput = solar + wind;
         let capacityFactor = (solar * 0.25 + wind * 0.40) / electrolyzer;
-        if (capacityFactor > 0.9) capacityFactor = 0.9; // Cap physical threshold
+        if (capacityFactor > 0.9) capacityFactor = 0.9; 
         
-        // Calculate annual mass flow output (kg/year)
         const annualHours = 8760;
-        const h2PerMWPerHour = 18.5; // PEM standard engineering parameter
+        const h2PerMWPerHour = 18.5; 
         const annualH2Produced = electrolyzer * capacityFactor * annualHours * h2PerMWPerHour;
 
-        // 3. Techno-Economic Layer (LCOH Equation)
-        const capexBase = electrolyzer * 1100000 + (solar * 800000) + (wind * 1300000); // Standardized CAPEX
+        const capexBase = electrolyzer * 1100000 + (solar * 800000) + (wind * 1300000); 
         const annualOpex = capexBase * 0.03;
         const projectLifetime = 20;
-        const discountRate = 0.08;
         
         let localizedCostFactor = 1.0;
         const currentScenario = document.getElementById("scenario").value;
-        if (currentScenario === 'aggressive') localizedCostFactor = 0.85; // Tech scale down
-        if (currentScenario === 'pessimistic') localizedCostFactor = 1.30; // Supply chain shock
+        if (currentScenario === 'aggressive') localizedCostFactor = 0.85; 
+        if (currentScenario === 'pessimistic') localizedCostFactor = 1.30; 
 
         const lcoh = ((capexBase / projectLifetime) + annualOpex) / (annualH2Produced) * localizedCostFactor * 10;
 
-        // 4. MBB Strategic Sensitivity Layer
         const netProfitMargin = ((marketPrice - lcoh) / marketPrice) * 100;
 
-        // 5. Machine Learning Simulation Layer (Predictive Degradation based on Intermittency)
-        // High intermittency (unbalanced hybrid ratio) accelerates degradation
         const hybridRatio = wind / (solar + 0.001);
         let predictedDegradation = 1.5 + (1 / (hybridRatio + 0.5));
         if (predictedDegradation > 3.5) predictedDegradation = 3.5;
 
-        // Marginal Abatement Cost (MAC)
-        const carbonSavedPerKg = 10; // 10kg CO2 saved per kg green H2 vs grey
-        const annualCarbonSaved = (annualH2Produced * carbonSavedPerKg) / 1000; // Tonnes
+        const carbonSavedPerKg = 10; 
+        const annualCarbonSaved = (annualH2Produced * carbonSavedPerKg) / 1000; 
         const mac = (annualOpex) / (annualCarbonSaved + 1);
 
-        // Render to UI
         document.getElementById("h2Output").innerText = (annualH2Produced / 1000).toFixed(1) + " Tonnes/yr";
         document.getElementById("capacityFactor").innerText = (capacityFactor * 100).toFixed(1) + "%";
         document.getElementById("lcohValue").innerText = "$" + lcoh.toFixed(2) + " /kg";
@@ -316,14 +304,13 @@
         document.getElementById("degradationRate").innerText = predictedDegradation.toFixed(2) + "% /yr";
         document.getElementById("macValue").innerText = "$" + mac.toFixed(2) + " /ton CO2";
 
-        // Generate dynamic strategic insight text
         let insightText = "";
         if (netProfitMargin > 20) {
-            insightText = `<strong>MBB Strategic Recommendation:</strong> Strong Investment Case. The hybrid configuration achieves a healthy capacity factor of ${(capacityFactor*100).toFixed(0)}%, robustly absorbing market volatility. Risk profile is mitigated.`;
+            insightText = `<strong>Strategic Framework Recommendation:</strong> Strong Investment Case. The hybrid configuration achieves a healthy capacity factor of ${(capacityFactor*100).toFixed(0)}%, robustly absorbing market volatility. Financial risk profile is effectively mitigated.`;
         } else if (netProfitMargin > 0) {
-            insightText = `<strong>MBB Strategic Recommendation:</strong> Marginal Viability. Tight margin discovered. Advise optimizing the Solar-to-Wind capacity ratio to stabilize input currents and reduce the ML-predicted degradation rate.`;
+            insightText = `<strong>Strategic Framework Recommendation:</strong> Marginal Viability. Tight commercial margin discovered. Advise optimizing the Solar-to-Wind capacity ratio to stabilize input currents and reduce the ML-predicted degradation rate.`;
         } else {
-            insightText = `<strong>MBB Strategic Recommendation:</strong> Strategic Rejection. LCOH exceeds target global selling price. Financial restructure or localized technology subsidies required to bridge the feasibility gap.`;
+            insightText = `<strong>Strategic Framework Recommendation:</strong> Strategic Rejection. LCOH exceeds target global selling price. Financial restructure or localized technology subsidies required to bridge the feasibility gap.`;
         }
         document.getElementById("strategicInsight").innerHTML = insightText;
     }
