@@ -1,30 +1,30 @@
-# Integrated Green Hydrogen Techno-Economic & Sensitivity Platform
+# Quantitative Simulation Framework for De-Risking Green Hydrogen Infrastructure
 
-An advanced, data-driven simulation platform that bridges renewable energy engineering with strategic energy economics and machine learning. Designed as a decision-making framework to de-risk green hydrogen investments and analyze asset capacity optimizations within Saudi Arabia's evolving energy landscape under Vision 2030.
+An advanced, data-driven techno-economic simulation platform that bridges clean energy engineering with quantitative economics and predictive machine learning. This platform serves as an asset-level decision-making framework designed to optimize infrastructure capacities, calculate systemic degradation, and conduct rigorous sensitivity analysis under shifting market scenarios within Saudi Arabia's strategic energy transition.
 
-## 🌟 Core Pillars & Features
+## 🌟 Core Strategic Pillars
 
 ### 1. Technical & Engineering Core
-* **Hybrid Intermittency Simulation:** Models combined solar PV and wind asset capacity dynamics under variable environmental profiles.
-* **Electrolyzer Dynamics:** Simulates Proton Exchange Membrane (PEM) electrolyzer mass flow outputs ($kg/hour$) as a direct function of dynamic, fluctuating power inputs ($kW$).
+* **Hybrid Intermittency Blending:** Simulates dynamic co-located solar PV and wind asset configurations against fixed electrolyzer capacities.
+* **Electrolyzer Engineering Simulation:** Models real-time Proton Exchange Membrane (PEM) electrolyzer mass flow outputs ($kg/hour$) as a direct mathematical function of fluctuating power inputs ($kW$).
 
 ### 2. Machine Learning Predictive Layer
-* **Predictive Degradation Modeling:** Simulates algorithmic forecasting to predict 10-year electrolyzer cell degradation rates driven by input current volatility.
-* **Marginal Abatement Cost (MAC):** Quantifies carbon reduction efficiency ($/ton CO2 avoided) to validate sustainability metrics.
+* **Predictive Cell Degradation:** Simulates an algorithmic forecasting module to evaluate 10-year electrolyzer cell degradation driven by current volatility and power drops.
+* **Marginal Abatement Cost (MAC):** Quantifies environmental sustainability efficiency ($/ton CO2 avoided) relative to operational expenditures.
 
-### 3. MBB Strategic Decision Dashboard
-* **LCOH Calculation Engine:** Computes the Levelized Cost of Hydrogen ($/kg) integrating dynamic CAPEX/OPEX constraints and technological scale factors.
-* **Strategic Sensitivity & Scenario Planning:** Features real-time parameter shifting based on standard management consulting frameworks:
-  * *Base Case*: Standard Vision 2030 energy trajectory.
-  * *Aggressive Transformation*: Accelerated tech subsidies and capacity scaling.
-  * *Pessimistic Case*: Supply chain shocks and sub-optimal resource risk.
-* **Commercial Mindset Integration:** Automatically computes net profit margins and delivers dynamic, executive-ready strategic recommendations for project de-risking.
+### 3. Quantitative Economic & Sensitivity Dashboard
+* **LCOH Calculation Engine:** Computes the Levelized Cost of Hydrogen ($/kg) by integrating dynamic CAPEX/OPEX constraints and technology scaling factors.
+* **Scenario Planning Framework:** Features structural baseline shifting across standard management consulting evaluation parameters:
+  * *Base Case*: Standard energy diversification trajectory.
+  * *Aggressive Transformation*: Accelerated technological sub-components and high-capacity scaling.
+  * *Pessimistic Case*: Supply chain shocks and sub-optimal resource risks.
+* **Commercial Viability Analysis:** Automatically processes net profit margins against target global market prices to output executive-ready risk mitigation metrics.
 
-## 🛠️ Tech Stack & Architecture
-* **Frontend Architecture:** Clean, highly scannable UI styled with a dark academic aesthetic for maximum visibility.
-* **Logic Engine:** Pure, high-performance asynchronous JavaScript handling mathematical modeling, deterministic simulations, and iterative optimization loops.
+## 🛠️ Architecture & Tech Stack
+* **UI/UX Layer:** Structured with a minimalist, high-contrast typography style optimized for executive and academic data consumption.
+* **Computational Logic:** Built on pure, high-performance asynchronous JavaScript handling deterministic simulations, discounted cash flow matrices, and iterative optimization loops.
 
-## 🚀 Deployment & Usage
-1. Clone this repository:
+## 🚀 Quick Start & Deployment
+1. Clone this repository to your local directory:
    ```bash
    git clone [https://github.com/YOUR_USERNAME/green-hydrogen-platform.git](https://github.com/YOUR_USERNAME/green-hydrogen-platform.git)
